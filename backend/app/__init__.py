@@ -6,6 +6,7 @@ import os
 
 db = SQLAlchemy()
 
+
 def create_app(test_config=None):
     app = Flask(__name__)
 
