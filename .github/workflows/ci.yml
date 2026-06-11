@@ -49,7 +49,7 @@ jobs:
 
       - name: Run pip-audit
         working-directory: backend
-        run: pip-audit -r requirements.txt --severity critical
+        run: pip-audit -r requirements.txt
 
       - name: Run Bandit SAST scan
         working-directory: backend
