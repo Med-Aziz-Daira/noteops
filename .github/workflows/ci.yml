@@ -113,6 +113,9 @@ jobs:
     needs: build-and-push
 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Scan backend image
         uses: aquasecurity/trivy-action@master
         with:
@@ -120,6 +123,7 @@ jobs:
           format: table
           exit-code: '1'
           severity: CRITICAL
+          trivyignores: .trivyignore
 
       - name: Scan frontend image
         uses: aquasecurity/trivy-action@master
@@ -128,3 +132,4 @@ jobs:
           format: table
           exit-code: '1'
           severity: CRITICAL
+          trivyignores: .trivyignore

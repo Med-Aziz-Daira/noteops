@@ -1,0 +1,4 @@
+# perl-base CVEs - fix_deferred, no upstream patch available as of build date
+# These are in the base image and cannot be remediated until upstream releases a fix
+CVE-2026-42496
+CVE-2026-8376
